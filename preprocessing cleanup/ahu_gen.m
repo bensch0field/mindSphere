@@ -1,0 +1,6 @@
+function AHU = ahu_gen()
+val = json_decoder('AHU06 Heating Coil.json');
+data = val.values;
+data = struct2cell(data)';
+AHU.humidity1 = str2double(data(:,1));
+end
